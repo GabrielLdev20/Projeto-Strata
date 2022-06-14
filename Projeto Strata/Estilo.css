@@ -1,0 +1,353 @@
+body{ /* Todo o corpo do site */
+    font-family: 'Open Sans', arial, helvetica, sans-serif;
+    color: #666;
+    line-height: 1.7;
+}
+ 
+.main-header{ /* Tudo que está fixo na esquerda */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 35%;
+    padding: 125px 54px 72px;
+    box-sizing: border-box;
+    background-image: url(../Projeto\ Strata/Imagens\ Strata/overlay.png), 
+    url(../Projeto\ Strata/Imagens\ Strata/bg.jpg);
+    background-position: left top;
+    background-size: auto, cover;
+    text-align: right;
+}
+
+
+.main-header-title{ /* Texto que está na esquerda */
+    font-size: 24px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: normal;
+}
+.main-header-title strong{ /* != */
+    color: white;
+    font-weight: normal;
+}
+
+.main-header-link{ /* Link que está da esquerda */
+    color: inherit;
+}
+.main-header-link:hover{ /* != */
+    color: #49bf9d;
+}
+a{ /* Links da página toda  */
+    transition: color 0.3s linear, border 0.1s linear;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    color: #49bf9d;
+}
+a:hover{ /* != */
+    border-bottom-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6{ /* Todos os titulos da página */
+    color: #787878;
+    font-weight: normal;
+    margin: 1em 0;
+}
+/* Formatação de titulo por titulo, size. */
+h1{
+    font-size: 36px;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 26px;
+}
+h4{
+    font-size: 22px;
+}
+h5{
+    font-size: 18px;
+}
+h6{
+    font-size: 15px;
+}
+
+p{ /* Parágrafos*/
+    margin: 0 0 2em;
+}
+
+sub, sup{ /* Pequeno detalhe dentro de um parágrafo*/
+    font-size: 12px;
+}
+
+blockquote{ /* Parte da citação */
+    border-left: 5px solid #efefef;
+    margin: 2em 0;
+    padding: .5em 0 .5em 1.5em;
+}
+
+code{ /* Parte que tem o Box no meio da página, que tem o code dentro */
+    background-color: #f7f7f7;
+    border-radius: .35em;
+    border: 2px solid #efefef;
+    font-size: 1em;
+    padding: 0.25em 0.65em;
+    font-family: "courier New", monospace;
+    color: #929292;
+}
+
+pre code{ /* != */
+    display: block;
+}
+
+ul, ol{ /* tabelas da página */
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    padding-left: 1em;
+}
+li{ /* != */
+    padding-left: .5em;
+}
+
+.ul-alternate{ /* Tabela Diferente. Alternate*/
+    list-style-type: none;
+    padding: 0;
+}
+.ul-alternate li{ /* != */
+    border-bottom: 2px solid #d8d8d8;
+    padding: 0;
+}
+.ul-alternate li:last-child{ /* != */
+    border: 0;
+}
+
+.ul-icons{ /* Icons das redes sociais */
+    list-style-type: none;
+    padding-left: 0;
+    color: #49bf9d;
+}
+.ul-icons li{ /* != */
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+.row{ /* Posição das listas e dos icons na página */ 
+    overflow: auto;
+}
+
+.col-2{ /* != */
+    width: 48.5%;
+    float: left;
+}
+.col-2:first-child{
+    margin-right: 1.5%;
+}
+.col-2:last-child{
+    margin-left: 1.5%;
+}
+.buttom-default{ /* Botões Default */
+    background-color: #49bf9d;
+    border: 2px solid #49bf9d;
+    color: white;
+    border-radius: 5px;
+    font-size: .8em;
+    padding: .75em 1.5em;
+    margin-right: 1em;
+    display: inline-block;
+    width: auto;
+    transition: all .3s ease-in;
+    cursor: pointer; /* Mudar o curso da pessoa quando ela passar o mouse em cima do botão!*/
+}
+
+.buttom-default-stroke{ /* != */
+    background-color: white;
+    border-color: #49bf9d;
+    color: inherit;
+}
+.buttom-default-stroke:hover{
+    background-color: #49bf9d;
+    color: white;
+    border-color: #49bf9d;
+}
+.buttom-default-small{ /* != */
+    font-size: .65em;
+}
+.buttom-default-full{ /* != */
+    width: 85%;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Tabelas*/
+.table{ /* Tabela em geral */
+    width: 100%;
+    margin: 0 0 2em 0;
+    border-collapse: collapse;
+    text-align: left;
+}
+.table tr td{ /* Padding no meio da tabela */
+    padding: .75em;
+}
+.tabel td{ /* Tabela tds */
+    padding: .75em;
+}
+.table th{ /* Parte de cima da tabela. thead */
+    padding: .75em;
+}
+.table tbody tr td{ /* Parte do meio da tabela, linhas do meio. tbody */
+    border-bottom: 1px solid #ccc;
+}
+.table tbody tr:first-child td{ /* Parte do meio da tabela, linha do topo */
+    border-top: 2px solid rgb(227, 227, 227);
+}
+.table tbody tr:last-child td{ /* Parte do meio da tabela, linha final */
+    border-bottom: 2px solid  rgb(227, 227, 227);
+}
+.table tbody tr:nth-child(odd) td{ /* Cor do fundo das que estão variando */
+    background-color: #eeeeee;
+}
+.table-alternate tbody td, .table-alternate tbody tr:first-child td, .table-alternate tbody tr:last-child td{ /*Linhas que estão apenas no meio da alternate */
+    border: 1px solid #ccc;
+}
+.col-2-3{ /* Segundo formulário que aparece junto com o adress. Get in Touch */
+    width: 66%;
+    float: left;
+}
+.col-1-3{ /* Adress que aparece junto com o formulário. Get in touch*/
+    width: 32%;
+    float: left;
+}
+
+input, label, textarea, select{ /* Arrumando o formulário. Get in touch */
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+input, label{ /* != */
+    width: 65%;
+}
+input, textarea, select{ /* != */
+    background-color: rgb(221, 221, 221);
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    margin-bottom: 5px;
+}
+input:focus, textarea:focus{ /* formatação para dar o efeito na borda */
+    border: 2px solid #49bf9d;
+    outline: none;
+}
+textarea{ /* Formatação do txtarea tamanho */
+    height: 150px;
+}
+.buttom-default-big{ /* formatação botam 'enviar' get in touch*/
+    width: auto;
+    font-size: 1em;
+}
+input[type="radio"], input[type="checkbox"]{
+    width: auto;
+    
+}
+.imagem-link{ /* Formatação das imagens para tirar a linha embaixo delas */
+    border: 0;
+}
+img{ /* Todas as imagens da página */
+    max-width: 100%;
+}
+.recentwork-card img{ /* Imagens do recent works */
+    border-radius: 10px;
+    overflow: hidden;
+}
+.main-header-link img{ /* Imagem do avatar, que fica grande a direita */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.gallery-img img{
+    width: 100%;
+}
+.col-1-3:nth-child(3n - 2){ /* Espaçamento entre as imagens do meio */
+    margin-right: 2%;
+}
+.col-1-3:nth-child(3n){ /* Espaçamento entre as imagens do meio */
+    margin-left: 2%;
+}
+
+.gallery-thumb img, .gallery-img img{ /* Parte da página que tem várias fotos. Imagens */
+    margin-bottom: 2%;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.col-1-3 + .col-2-3, .col-2-3 + .col-1-3{
+    margin-left: 2%;
+}
+
+.main-section{ /* Toda a section da direita. Apenas o tamanho dela e alinhamento na página */
+    width: 65%;
+    margin-left: 35%;
+    padding: 1px 54px 20px;
+    box-sizing: border-box;
+}
+.main-section:first-child{ /* Apenas para acertar a distnacia que estava de uma section para a outra */
+    padding: 124px 54px 25px;
+}
+
+.main-footer{ /* Arrumando o footer da página*/
+    position: fixed;
+    bottom: 0;
+    width: 35%;
+    left: 0;
+    padding: 0 54px 72px;
+    box-sizing: border-box;
+    text-align: right;
+    list-style: none;
+}
+.icon-link{ /* Cor dos icons */
+    color: white;
+    border-bottom: 0;
+}
+.copyright{ /* Parte que está escrito copyright */
+    display: inline-flex;
+    font-size: 15px;
+    list-style-type: none;
+}
+.copyright li:first-child{
+    margin-right: 9px;
+}
+.copyright a{ /*!= */
+    color: #787878;
+}
+.copyright a:hover{ /* != */
+    color: #49bf9d;
+}
+.p-link{ /* Aumentar o tamanho da letra no link do Udemy no incio da página*/
+    font-size: 20px;
+}
+
+
+/* Parte final da página que eu ainda vou resolver/ Consegui resolver kkkkkk */
+.img-left{ /* Imagem da esquerda */
+    border-radius: 5px;
+    float: left;
+    display: inline;
+    margin-right: 20px;
+}
+.p-final-L{ /* Texto da esquerda */
+    color: #787878;
+    display: inline-block;
+}
+
+
+.img-right{ /* Imagem da direita */
+    border-radius: 5px;
+    float: right;
+    display: inline;
+    margin-left: 20px;
+}
+.p-final-R{ /*Texto da direita */
+    color: #787878;
+    text-align: right;
+    display: inline-block;
+}
